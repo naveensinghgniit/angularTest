@@ -6,16 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  greetings = '';
-  greetingType = '';
-
-  onClick(event) {
-    this.greetings = 'Welcome back to Angular Project';
-    console.log (event);
-    this.greetingType = event.type;
-  }
-
-  logMessage(value) {
-    console.log(value);
-  }
+  public userName = '';
 }
