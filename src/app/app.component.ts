@@ -13,6 +13,23 @@ export class AppComponent {
   siteUrl = window.location.href;
   isDisabled = true;
 
+  // Class and ngClass binding
+  textSuccess = 'text-success';
+  hasError = true;
+  isSpecial = true;
+  messageClasses = {
+    'text-success': !this.hasError,
+    'text-warning': this.hasError,
+    'text-special': this.isSpecial
+  };
+
+  // style binding
+  highlightColor = 'pink';
+  titleStyles = {
+    textTransform: 'uppercase',
+    color: 'purple'
+  };
+
   greetUser() {
     return 'Welcome to angular project ' + this.fullName;
   }
