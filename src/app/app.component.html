@@ -6,38 +6,10 @@
 <hr>
 <hr>
 
-<p>Interpolation : {{2+2}}</p>
-<p>String Concatenation : {{"2 + 2 = " + 2+2}}</p>
-<p>String length : {{fullName.length}}</p>
-<p>{{greetUser()}}</p>
-
+<h4>Event binding</h4>
+<button (click)="onClick($event)">Greet</button>
+<p>{{greetings}}</p>
+<p>{{greetingType}}</p>
 <hr>
 
-<p>Site URL is: {{siteUrl}}</p>
-<hr>
-<h4>Property binding VS Attribute binding</h4>
-<div>
-  <label [for]="myId">Attribute Binding</label>
-  <input type="text" value="Angular" [id]="myId">
-</div>
-<div>
-  <label for="myNewId">Disable Input Attribute Binding</label>
-  <input type="text" value="Angular" id="myNewId" [disabled]="isDisabled">
-</div>
-
-<hr>
-
-<h4>Class binding</h4>
-<p class="text-success">Hello world</p>
-<p [class]="textSuccess">Hello new world</p>
-<p [class.text-warning] = "hasError">Hello new world era</p>
-<p [ngClass] = "messageClasses">Hello special world</p>
-
-<hr>
-
-<h4>Style binding</h4>
-<p [style.color]="'yellow'">Hello world</p>
-<p [style.color]="hasError ? 'red' : 'green'">Hello world</p>
-<p [style.color]="highlightColor">Hello world</p>
-<p [ngStyle]="titleStyles">Hello world</p>
 <router-outlet></router-outlet>

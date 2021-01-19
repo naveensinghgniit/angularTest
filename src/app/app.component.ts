@@ -6,31 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public firstName = 'Naveen';
-  public lastName = 'Kumar';
-  fullName = this.firstName + ' ' + this.lastName;
-  myId = 'myInput';
-  siteUrl = window.location.href;
-  isDisabled = true;
+  greetings = '';
+  greetingType = '';
 
-  // Class and ngClass binding
-  textSuccess = 'text-success';
-  hasError = true;
-  isSpecial = true;
-  messageClasses = {
-    'text-success': !this.hasError,
-    'text-warning': this.hasError,
-    'text-special': this.isSpecial
-  };
-
-  // style binding
-  highlightColor = 'pink';
-  titleStyles = {
-    textTransform: 'uppercase',
-    color: 'purple'
-  };
-
-  greetUser() {
-    return 'Welcome to angular project ' + this.fullName;
+  onClick(event) {
+    this.greetings = 'Welcome back to Angular Project';
+    console.log (event);
+    this.greetingType = event.type;
   }
 }
