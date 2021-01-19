@@ -6,5 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  public userName = '';
+  public displayText = true;
+  public displayTemplateReference = false;
+
+  public newStyle = {
+    'text-success': this.displayTemplateReference,
+    'text-warning': !this.displayTemplateReference
+  };
+
+  toggleNewStyle() {
+    console.log('welcome to event binding');
+    if (this.displayTemplateReference === false) {
+      this.displayTemplateReference = true;
+    } else {
+      this.displayTemplateReference = false;
+    }
+
+    if (this.newStyle === 'text-success') {
+      this.newStyle = 'text-warning';
+    } else {
+      this.newStyle = 'text-success';
+    }
+  }
 }

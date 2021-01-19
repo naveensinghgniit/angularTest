@@ -6,9 +6,25 @@
 <hr>
 <hr>
 
-<h4>Two way data binding</h4>
-<input type="text" [(ngModel)]="userName">
-<p>{{userName}}</p>
+<h4>Structural Directives</h4>
 
+<hr>
 
+<h6>*ngIf</h6>
+<p *ngIf = "true">Welcome to ngIf world</p>
+<p *ngIf = "displayText">Welcome to property binding ngIf world</p>
+<div>
+  <p [ngClass]="newStyle" *ngIf="displayTemplateReference; else elseBlock">
+    If block is visible now!
+  </p>
+
+  <p [ngClass]="newStyle">Testing new style color output</p>
+
+  <ng-template #elseBlock>
+    <p [ngClass]="newStyle"> Else block is visible now!</p>
+  </ng-template>
+
+  <button (click)="toggleNewStyle()">Change Me</button>
+
+</div>
 <router-outlet></router-outlet>
