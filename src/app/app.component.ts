@@ -14,4 +14,8 @@ export class AppComponent {
     console.log (event);
     this.greetingType = event.type;
   }
+
+  logMessage(value) {
+    console.log(value);
+  }
 }

@@ -10,6 +10,11 @@
 <button (click)="onClick($event)">Greet</button>
 <p>{{greetings}}</p>
 <p>{{greetingType}}</p>
+
 <hr>
+
+<h4>Template reference variable</h4>
+<input type="text" #myInput>
+<button (click)="logMessage(myInput.value)">Log</button>
 
 <router-outlet></router-outlet>
